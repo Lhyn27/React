@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import { MyPlaylist } from "./components/MyPlaylist"
 /**
@@ -7,4 +7,7 @@ import { MyPlaylist } from "./components/MyPlaylist"
 export const App = () => <MyPlaylist/>;
 
     const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<App />);
+    root.render(
+    <StrictMode>
+        <App />
+    </StrictMode>);

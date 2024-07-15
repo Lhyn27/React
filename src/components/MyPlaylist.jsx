@@ -62,7 +62,7 @@ export const MyPlaylist = () => {
                 <button className='btn btn-success ms-2' onClick={addSong}><i class="bi bi-check-circle"></i></button>
                 <button className='btn btn-danger ms-2' onClick={removeNonFavorites}><i class="bi bi-trash"></i></button>
             </div>
-            <div className="row">
+            <div>
                 {playlist.map(song => (<div className='col-md-6 mb-3' key={song.id}> <SpotifyPlayer url={song.url} favorite={song.favorite} setFavorite={() => setFavorite(song.id)} /></div>
                 ))}
             </div>
